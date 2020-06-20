@@ -1,0 +1,373 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.5;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+img {
+	max-width: 100%;
+  	height: auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+
+
+
+
+/* Responsive nav*/
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+/*CSS variables*/
+
+:root {
+	--primary-color:#b90415;
+	--primary-color-hover:#d3071b;
+	--secondary-color:#103063;
+	--secondary-color-hover:#143f85;
+	--lighting-color:#f4f4f4;
+
+}
+
+body {
+  font-family: 'PT Sans Narrow', sans-serif;
+  background-color: #252529;
+  margin: 0;
+  color: #fff;
+
+}
+
+nav {
+  height: 40px;
+  width: 100%;
+  background-color: #333;
+  color: #eee;
+  position: fixed;
+  margin: 0;
+}
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+nav li {
+  display: inline;
+  float: left;
+}
+nav a {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 0;
+  color: #eee;
+  text-decoration: none;
+}
+nav li:hover {
+  background-color: #444;
+}
+nav a#openup {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 2.8em;
+  }
+
+  nav {
+    height: auto;
+    border-bottom: 0;
+  }
+  nav ul {
+    display: none;
+    height: auto;
+  }
+  nav li {
+    width: 100%;
+    float: left;
+    position: relative;
+  }
+  nav a {
+    text-align: left;
+    width: 100%;
+    text-indent: 25px;
+    background: #333;
+    border-bottom: 1px solid #555;
+  }
+  nav a:hover {
+    background: #444;
+  }
+  nav a#openup:after {
+    content: "|||";
+    transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-90deg);
+    /* Safari and Chrome */
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+    right: 5px;
+    top: 20px;
+  }
+  nav a#openup {
+    display: block;
+    background-color: #333;
+    width: 100%;
+    position: relative;
+  }
+}
+.cf:before, .cf:after {
+  content: "";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  zoom: 1;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+
+/*Buttons*/
+
+.btn{
+	padding: 1rem;
+	color: #fff;
+	display: inline-block;
+}
+
+.button-music{
+	background: var(--primary-color);
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.button-music:hover{
+	background: var(--primary-color-hover);
+}
+
+.button-video{
+	background: var(--secondary-color);
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.button-video:hover{
+	background: var(--secondary-color-hover);
+
+}
+
+
+
+
+
+/*Text colors*/
+.text-primary{
+	color: var(--primary-color);
+}
+
+.text-secondary{
+	color: var(--secondary-color);
+}
+
+.text-light{
+	color: var(--lighting-color);
+}
+
+.bg-light {
+	background: var(--lighting-color);
+	color: #333;
+}
+
+/*Showcase*/
+
+#showcase{
+padding: 0;
+margin: 0;
+background-image:url('img/showcase.jpg');
+height: 150vh;
+width: 100%;
+position: relative;
+overflow-y: hidden;
+
+}
+
+
+#showcase .container{	
+	padding-top: 25vh;
+}
+
+.container{
+	text-align: center;
+	max-width: 1180px;
+	margin: 0 auto;
+	padding: 0 3rem;
+	font-size: 1.3rem;
+
+}
+
+#showcase h1{
+	font-size: 4rem;
+
+}
+
+#showcase h2{
+	font-size: 2rem;
+
+}
+
+@media screen and (max-width: 550px){
+	.hide-on-small{
+		display: none;
+	}
+}
+
+
+@media screen and (max-width: 400px){
+	
+	#showcase h1 {
+	font-size: 3rem;
+	padding-bottom: 1rem;
+
+}
+
+}
+
+#music h2 {
+   font-size: 2rem;
+   margin-bottom: 2rem;
+}
+
+#music h3 {
+	font-size: 1.6rem;
+	margin-bottom: 2rem;
+}
+
+#music {
+	padding-top: 1rem;
+	
+}
+
+
+
+#video h2 {
+	font-size: 2rem;
+	padding-bottom: 2rem;
+	padding-top: 2rem;
+}
+
+#entertainment {
+	background: url('img/section-bg.jpg') no-repeat bottom/cover;
+	/*height: auto;*/
+	padding: 10rem 0;
+}
+
+#entertainment h2 {
+	font-size: 2rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem; 
+}
+
+#entertainment p {
+	/*padding-bottom: 2rem;*/
+}
+
+@media screen and (min-width: 550px){
+.gift-cards{
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: 1fr 1fr;
+}
+
+}
+
+#gift-card h3 {
+	font-size: 2rem;
+}
+
+#gift-card .cta{
+	padding-top:2rem;
+	padding-bottom: 2rem;
+}
+
+#gift-card .try-out {
+	padding: 2rem 0;
+}
+
+.footer{
+	padding-top: 1rem;
+	text-decoration: none;
+	display: block;
+	text-align: center;
+}
+
+@media screen and (min-width: 550px){
+	.footer{
+	text-decoration: none;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	justify-items: center;
+}
+	.copy-right{
+		grid-column: 2 / 4;
+	}
+
+}
+
+.copy-right{
+	text-align: center;
+	/*padding-left: 10rem;*/
+}

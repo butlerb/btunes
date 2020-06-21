@@ -214,6 +214,7 @@ nav a#openup {
 
 
 /*Text colors*/
+
 .text-primary{
 	color: var(--primary-color);
 }
@@ -371,3 +372,6 @@ overflow-y: hidden;
 	text-align: center;
 	/*padding-left: 10rem;*/
 }
+
+
+/*This is just a test*/
